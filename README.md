@@ -29,7 +29,7 @@ Native localStorage.
 
 ```js
 import { createLocalStorage } from "localstorage-ponyfill";
-const localStorage = createLocalStorage({ mode : "browser "});
+const localStorage = createLocalStorage({ mode : "browser" });
 ```
 
 ### Node.js
@@ -41,7 +41,7 @@ You can setting the path by `storeFilePath` option.
 
 ```js
 import { createLocalStorage } from "localstorage-ponyfill";
-const localStorage = createLocalStorage({ mode : "node "});
+const localStorage = createLocalStorage({ mode : "node" });
 ```
 
 ### In memory
@@ -50,7 +50,7 @@ Use [localstorage-memory](https://github.com/gr2m/localstorage-memory "localstor
 
 ```js
 import { createLocalStorage } from "localstorage-ponyfill";
-const localStorage = createLocalStorage({ mode : "memory "});
+const localStorage = createLocalStorage({ mode : "memory" });
 ```
 
 ## API
