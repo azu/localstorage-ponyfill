@@ -36,6 +36,9 @@ const localStorage = createLocalStorage({ mode : "browser "});
 
 Use [node-localstorage](https://github.com/lmaccherone/node-localstorage "node-localstorage")
 
+Store data to `<app-root>/.cache/localstorage-ponyfill/*` by default.
+You can setting the path by `storeFilePath` option.
+
 ```js
 import { createLocalStorage } from "localstorage-ponyfill";
 const localStorage = createLocalStorage({ mode : "node "});
