@@ -11,7 +11,7 @@
     "src/"
   ],
   "name": "localstorage-ponyfill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Universal LocalStorage for browser and Node.js.",
   "main": "lib/localstorage-ponyfill.js",
   "types": "lib/localstorage-ponyfill.d.ts",
