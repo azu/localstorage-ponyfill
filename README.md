@@ -1,4 +1,5 @@
-# localstorage-ponyfill
+# localstorage-ponyfill [![Build Status](https://travis-ci.org/azu/localstorage-ponyfill.svg?branch=master)](https://travis-ci.org/azu/localstorage-ponyfill)
+
 
 Universal LocalStorage ponyfill library for browser and Node.js.
 
