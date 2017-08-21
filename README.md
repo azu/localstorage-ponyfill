@@ -11,7 +11,7 @@ Install with [npm](https://www.npmjs.com/):
 
 ## Usage
 
-### Auto(Browser or Bode.js)
+### Auto(Browser or Node.js)
 
 Automatically select mode.
 
