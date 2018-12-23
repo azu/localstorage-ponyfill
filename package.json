@@ -1,53 +1,76 @@
 {
-  "directories": {
-    "lib": "lib",
-    "test": "test"
+  "name": "localstorage-ponyfill",
+  "version": "1.0.1",
+  "description": "Universal LocalStorage for browser and Node.js.",
+  "keywords": [
+    "browser",
+    "isomophic",
+    "localstorage",
+    "node",
+    "universal"
+  ],
+  "homepage": "https://github.com/azu/localstorage-ponyfill",
+  "bugs": {
+    "url": "https://github.com/azu/localstorage-ponyfill/issues"
   },
-  "author": "azu",
   "license": "MIT",
+  "author": "azu",
   "files": [
     "bin/",
     "lib/",
     "src/"
   ],
-  "name": "localstorage-ponyfill",
-  "version": "1.0.1",
-  "description": "Universal LocalStorage for browser and Node.js.",
-  "main": "lib/localstorage-ponyfill.js",
-  "types": "lib/localstorage-ponyfill.d.ts",
-  "scripts": {
-    "test": "mocha",
-    "build": "cross-env NODE_ENV=production tsc -p .",
-    "watch": "tsc -p . --watch",
-    "prepublish": "npm run --if-present build"
+  "main": "lib/index.js",
+  "browser": "lib/browser.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   },
-  "keywords": [
-    "localstorage",
-    "universal",
-    "isomophic",
-    "node",
-    "browser"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/azu/localstorage-ponyfill.git"
   },
-  "bugs": {
-    "url": "https://github.com/azu/localstorage-ponyfill/issues"
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tsc -p .",
+    "prepublish": "npm run --if-present build",
+    "test": "mocha \"test/**/*.ts\"",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "watch": "tsc -p . --watch"
   },
-  "homepage": "https://github.com/azu/localstorage-ponyfill",
-  "devDependencies": {
-    "@types/mocha": "^2.2.41",
-    "@types/node": "^8.0.24",
-    "cross-env": "^5.0.5",
-    "mocha": "^3.5.0",
-    "ts-node": "^3.3.0",
-    "typescript": "^2.4.2"
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4
   },
   "dependencies": {
-    "app-root-path": "^2.0.1",
-    "localstorage-memory": "^1.0.2",
+    "app-root-path": "^2.1.0",
+    "localstorage-memory": "^1.0.3",
     "mkdirp": "^0.5.1",
-    "node-localstorage": "^1.3.0"
+    "node-localstorage": "^1.3.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.18",
+    "@types/trash": "^4.3.1",
+    "cross-env": "^5.2.0",
+    "husky": "^1.2.1",
+    "lint-staged": "^8.1.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.15.3",
+    "trash": "^4.3.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

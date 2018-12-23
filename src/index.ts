@@ -1,38 +1,8 @@
 // MIT © 2017 azu
-export type LocalStoragePonyfillMode = "browser" | "node" | "memory"
+import { LocalStoragePonyfill } from "./LocalStoragePonyfill";
+import { autoSelectMode, LocalStoragePonyfillMode, LocalStoragePonyfillOptions } from "./shared";
 
-export interface LocalStoragePonyfillOptions {
-    // "auto" by default
-    mode?: "auto" | LocalStoragePonyfillMode;
-    // save file path. that is used in "node" mode
-    storeFilePath?: string;
-}
-
-export interface LocalStoragePonyfill {
-    readonly length: number;
-
-    clear(): void;
-
-    getItem(key: string): string | null;
-
-    key(index: number): string | null;
-
-    removeItem(key: string): void;
-
-    setItem(key: string, data: string): void;
-
-    [key: string]: any;
-
-    [index: number]: string;
-}
-
-const autoSelectMode = (): LocalStoragePonyfillMode => {
-    if (typeof window === "object" && window.localStorage) {
-        return "browser";
-    } else {
-        return "node";
-    }
-};
+export { LocalStoragePonyfill };
 
 export function createLocalStorage(options: LocalStoragePonyfillOptions = {}): LocalStoragePonyfill {
     const mode = options.mode || "auto";
