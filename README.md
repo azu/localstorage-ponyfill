@@ -1,7 +1,6 @@
 # localstorage-ponyfill [![Build Status](https://travis-ci.org/azu/localstorage-ponyfill.svg?branch=master)](https://travis-ci.org/azu/localstorage-ponyfill)
 
-
-Universal LocalStorage ponyfill library for browser and Node.js.
+Universal LocalStorage ponyfill library for Browser and Node.js.
 
 ## Install
 
@@ -14,6 +13,9 @@ Install with [npm](https://www.npmjs.com/):
 ### Auto(Browser or Node.js)
 
 Automatically select mode.
+
+- If the environment defined `window.localStorage` -> "browser"
+- else -> "Node"
 
 ```js
 import { createLocalStorage } from "localstorage-ponyfill";
@@ -44,7 +46,9 @@ import { createLocalStorage } from "localstorage-ponyfill";
 const localStorage = createLocalStorage({ mode : "node" });
 ```
 
-### In memory
+### InMemory
+
+InMemory localStorage work on Node.js and Browser.
 
 Use [localstorage-memory](https://github.com/gr2m/localstorage-memory "localstorage-memory")
 
