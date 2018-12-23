@@ -15,7 +15,7 @@ Install with [npm](https://www.npmjs.com/):
 Automatically select mode.
 
 - If the environment defined `window.localStorage` -> "browser"
-- else -> "Node"
+- else -> "node"
 
 ```js
 import { createLocalStorage } from "localstorage-ponyfill";
