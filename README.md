@@ -1,4 +1,4 @@
-# localstorage-ponyfill [![Build Status](https://travis-ci.org/azu/localstorage-ponyfill.svg?branch=master)](https://travis-ci.org/azu/localstorage-ponyfill)
+# localstorage-ponyfill [![Actions Status: test](https://github.com/azu/localstorage-ponyfill/workflows/test/badge.svg)](https://github.com/azu/localstorage-ponyfill/actions?query=workflow%3A"test")
 
 Universal LocalStorage ponyfill library for Browser and Node.js.
 
