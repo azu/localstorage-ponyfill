@@ -88,6 +88,10 @@ export interface LocalStoragePonyfill {
 
 ```
 
+## IndexedDB
+
+If you want to get IndexedDB storage, please use [azu/kvs](https://github.com/azu/kvs).
+
 ## Changelog
 
 See [Releases page](https://github.com/azu/localstorage-ponyfill/releases).
